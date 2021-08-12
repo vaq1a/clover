@@ -2795,7 +2795,7 @@
 }
 
 .exchangeAppAbout {
-  padding: 43.5rem 38.6rem 13rem 46.5rem;
+  padding: 43.5rem 38.6rem 30rem 46.5rem;
 
   .exchangeAppAbout__title {
     font-size: 4.8rem;
@@ -2912,6 +2912,87 @@
           object-fit: cover;
         }
       }
+    }
+  }
+}
+
+.exchangeAppInterfaceContinue {
+  display: flex;
+  justify-content: space-between;
+  top: -36rem;
+  z-index: -1;
+
+  .exchangeAppInterfaceContinue__zippy {
+    margin-left: 6.7rem;
+    margin-top: 134.8rem;
+    max-width: 37.9rem;
+
+    .exchangeAppInterfaceContinue__zippy-img {
+      width: 36.3rem;
+      height: 27.4rem;
+      margin-bottom: 25rem;
+      position: relative;
+    }
+
+    .exchangeAppInterfaceContinue__zippy-decription {
+      font-size: 2.5rem;
+      line-height: 4.2rem;
+      color: #ECECEC;
+    }
+  }
+
+  .exchangeAppInterfaceContinue__center {
+    display: flex;
+    flex-direction: column;
+    margin-top: 24.5rem;
+
+    .exchangeAppInterfaceContinue__center-first {
+      margin-bottom: 21.4rem;
+      width: 41.1rem;
+      height: 88.9rem;
+    }
+
+    .exchangeAppInterfaceContinue__center-second {
+      margin-bottom: 20.7rem;
+      width: 36.3rem;
+      height: 27.4rem;
+    }
+
+    .exchangeAppInterfaceContinue__center-count {
+      font-size: 2.5rem;
+      line-height: 4.5rem;
+      font-weight: 400;
+      color: #8C8C8C;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 20rem;
+        height: 1px;
+        background-color: #8C8C8C;
+      }
+    }
+  }
+
+  .exchangeAppInterfaceContinue__minicard {
+    display: flex;
+    flex-direction: column;
+    margin-right: 19rem;
+    margin-top: 24.5rem;
+
+    .exchangeAppInterfaceContinue__minicard-first {
+      margin-bottom: 20.5rem;
+      width: 21.1rem;
+      height: 45.7rem;
+    }
+
+    .exchangeAppInterfaceContinue__minicard-second {
+      width: 21.1rem;
+      height: 45.2rem;
     }
   }
 }
