@@ -2617,6 +2617,39 @@
   height: 82rem;
 }
 
+.exchangeApp__count {
+  font-size: 2.5rem;
+  line-height: 4.5rem;
+  font-weight: 400;
+  color: #8C8C8C;
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 20rem;
+    height: 1px;
+    background-color: #8C8C8C;
+  }
+}
+
+.exchangeAppAddNewCard-content-small-img-wrapper {
+  width: 21.1rem;
+  height: 45.7rem;
+
+  .exchangeAppAddNewCard-content__small-img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+  }
+}
+
+
 //common
 .exchangeApp {
   overflow-x: hidden;
@@ -2972,25 +3005,6 @@
       width: 36.3rem;
       height: 27.4rem;
     }
-
-    .exchangeAppInterfaceContinue__center-count {
-      font-size: 2.5rem;
-      line-height: 4.5rem;
-      font-weight: 400;
-      color: #8C8C8C;
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 20rem;
-        height: 1px;
-        background-color: #8C8C8C;
-      }
-    }
   }
 
   .exchangeAppInterfaceContinue__minicard {
@@ -3067,19 +3081,6 @@
     }
   }
 
-  .exchangeAppAddNewCard-content-small-img-wrapper {
-    width: 21.1rem;
-    height: 45.7rem;
-
-    .exchangeAppAddNewCard-content__small-img {
-      width: 100%;
-      height: 100%;
-      max-width: 100%;
-      max-height: 100%;
-      object-fit: cover;
-    }
-  }
-
   .exchangeAppAddNewCard-content__paragraph {
     font-size: 2.5rem;
     line-height: 4.2rem;
@@ -3087,5 +3088,70 @@
     color: #ECECEC;
     max-width: 49.1rem;
     width: 100%;
+  }
+}
+
+.exchangeAppRegistrationProfile {
+  .exchangeAppRegistrationProfile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 28.2rem;
+    padding-right: 36.8rem;
+    padding-left: 7.4rem;
+
+    .exchangeAppRegistrationProfile-header__title {
+      font-size: 7.2rem;
+      line-height: 10rem;
+      color: #fff;
+    }
+  }
+
+  .exchangeAppRegistrationProfile-interfaces {
+    position: relative;
+    display: flex;
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: #2cdab0;
+      border-radius: 3rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 82rem;
+      z-index: -1;
+    }
+
+    .exchangeAppRegistrationProfile-interfaces__img-wrapper {
+      width: 56.4rem;
+      height: 104.3rem;
+
+      .exchangeAppRegistrationProfile-interfaces__img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .exchangeAppRegistrationProfile-interfaces__column {
+      &:first-child {
+        margin-right: 14.3rem;
+        margin-top: -18rem;
+      }
+
+      &:nth-child(2) {
+        margin-right: 21rem;
+        margin-top: 9.6rem;
+      }
+
+      &:nth-child(3) {
+        margin-top: 9.6rem;
+      }
+    }
   }
 }
