@@ -6,7 +6,7 @@ var $WINDOW = $(window),
  * !Detects overlay scrollbars (when scrollbars on overflowed blocks are visible).
  * This is found most commonly on mobile and OS X.
  * */
-var rellax = new Rellax(".rellax");
+var rellax = new Rellax(".rellax1");
 
 var HIDDEN_SCROLL = Modernizr.hiddenscroll;
 var NO_HIDDEN_SCROLL = !HIDDEN_SCROLL;
