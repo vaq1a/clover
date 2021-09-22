@@ -165,17 +165,17 @@ gulp.task('copyJqueryToJs', function () {
  */
 gulp.task('copyLibsScriptsToJs', ['copyJqueryToJs'], function () {
   return gulp.src([
-      'src/libs/jquery-smartresize/jquery.debouncedresize.js' // "умный" ресайз
-      , 'src/libs/jquery-placeholder/jquery.placeholder.min.js' // поддержка плейсхолдера в старых браузерах
-      , 'src/libs/fullpage.js/dist/fullpage.min.js' // постраничный скролл
-      , 'src/libs/jquery-validation/dist/jquery.validate.min.js' // валидация форм
-      , 'src/libs/select2/dist/js/select2.full.min.js' // кастомный селект
-      , 'src/libs/select2/dist/js/i18n/ru.js' // локализация для кастомного селекта
-      , 'node_modules/object-fit-images/dist/ofi.min.js' // object-fit fix for non-support browsers
-      , 'src/libs/jquery.nicescroll/dist/jquery.nicescroll.min.js', // nicescroll
-      // , 'src/libs/swiper/dist/js/swiper.min.js' // swiper
-      , 'src/_temp/jquery.nav.js' // nav and switch class
-      , 'node_modules/mobile-detect/mobile-detect.min.js' // mobile detect
+      'node_modules/rellax/rellax.min.js',
+      'src/libs/jquery-smartresize/jquery.debouncedresize.js',
+      'src/libs/jquery-placeholder/jquery.placeholder.min.js',
+      'src/libs/fullpage.js/dist/fullpage.min.js',
+      'src/libs/jquery-validation/dist/jquery.validate.min.js',
+      'src/libs/select2/dist/js/select2.full.min.js',
+      'src/libs/select2/dist/js/i18n/ru.js',
+      'node_modules/object-fit-images/dist/ofi.min.js',
+      'src/libs/jquery.nicescroll/dist/jquery.nicescroll.min.js',
+      'src/_temp/jquery.nav.js',
+      'node_modules/mobile-detect/mobile-detect.min.js'
     ])
     .pipe(concat('libs.js'))
     .pipe(gulp.dest('src/js'))
