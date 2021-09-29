@@ -2610,8 +2610,8 @@
 
 //modify
 .exchangeApp__count {
-  font-size: 2.5rem;
-  line-height: 4.5rem;
+  font-size: 1.6rem;
+  line-height: 2.9rem;
   font-weight: 400;
   color: #8C8C8C;
   position: relative;
@@ -2622,15 +2622,15 @@
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 20rem;
+    width: 13rem;
     height: 1px;
     background-color: #8C8C8C;
   }
 }
 
 .exchangeAppAddNewCard-content-small-img-wrapper {
-  width: 21.1rem;
-  height: 45.7rem;
+  width: 15.1rem;
+  height: 32.8rem;
 
   .exchangeAppAddNewCard-content__small-img {
     width: 100%;
@@ -2642,8 +2642,8 @@
 }
 
 .exchangeAppAddNewCard-content-large-img-wrapper {
-  width: 41rem;
-  height: 88.8rem;
+  width: 29.4rem;
+  height: 63.8rem;
 
   .exchangeAppAddNewCard-content__large-img {
     width: 100%;
@@ -2712,10 +2712,6 @@
 }
 
 //common
-.exchangeAppMain {
-  font-size: 62.5%!important;
-}
-
 .exchangeApp {
   overflow-x: hidden;
   background-color: #000;
@@ -2741,45 +2737,80 @@
     font-size: 1.4rem;
     color: #8C8C8C;
   }
+
+  @include media("<tab") {
+    display: none;
+  }
 }
 
 .exchangeAppInfo {
   .exchangeAppInfo__title {
     font-size: 7.2rem;
-    line-height: 9rem;
+    line-height: 115%;
     color: #fff;
-    padding: 19rem 0 6.7rem 12.1rem;
+    padding: 10rem 0 9rem 7.3rem;
+
+    @include media("<tab") {
+      font-size: 4.5rem;
+      padding: 3.2rem 0 27.2rem;
+    }
   }
 }
 
 .exchangeAppInfoContent {
   display: flex;
   justify-content: space-between;
-  padding: 8.4rem 0 5.4rem 12.1rem;
-  background: #2CDAB0;
-  box-shadow: 0 4rem 25rem rgba(44, 218, 176, 0.2);
-  border-radius: 3rem;
   position: relative;
+  padding: 5.5rem 0 3.5rem 7.3rem;
+
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 28.7rem;
+    border-radius: 3rem;
+    background: #2CDAB0;
+    box-shadow: 0 4rem 25rem rgba(44, 218, 176, 0.2);
+    z-index: -1;
+
+    @include media("<tab") {
+      max-height: 50.7rem;
+      height: 100%;
+    }
+  }
+
+  @include media("<tab") {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4.1rem 3.1rem;
+  }
 
   .exchangeAppInfoContent__description {
-    max-width: 50.8rem;
-    font-size: 2.5rem;
-    line-height: 5.2rem;
+    max-width: 33.3rem;
+    font-size: 1.6rem;
+    line-height: 3.4rem;
     color: #093127;
+
+    @include media("<tab") {
+      margin-top: 2rem;
+      max-width: 100%;
+      font-size: 1.4rem;
+      line-height: 2.3rem;
+    }
   }
 
   .exchangeAppInfoContent__bg-wrapper {
-    position: absolute;
-    right: 0;
-    top: -50.7rem;
-    height: 145.2rem;
-    width: 87.6rem;
+    position: relative;
+    margin: -32.7rem 6.5rem 0 1rem;
+    max-width: 52.5rem;
 
-    &:after {
-      content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI5IiBoZWlnaHQ9IjE3NyIgdmlld0JveD0iMCAwIDEyOSAxNzciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeT0iMTY4LjM2NiIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMzkuOTMzMSIgeT0iMTY4LjM2NiIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iNzkuODY1OCIgeT0iMTY4LjM2NiIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMTE5Ljc5OSIgeT0iMTY4LjM2NiIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeT0iMTI2LjI3NCIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMzkuOTMzMSIgeT0iMTI2LjI3NCIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iNzkuODY1OCIgeT0iMTI2LjI3NCIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMTE5Ljc5OSIgeT0iMTI2LjI3NCIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeT0iODQuMTgzMSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMzkuOTMzMSIgeT0iODQuMTgzMSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iNzkuODY1OCIgeT0iODQuMTgzMSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMTE5Ljc5OSIgeT0iODQuMTgzMSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeT0iNDIuMDkxMyIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMzkuOTMzMSIgeT0iNDIuMDkxMyIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iNzkuODY1OCIgeT0iNDIuMDkxMyIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMTE5Ljc5OSIgeT0iNDIuMDkxMyIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iMzkuOTMzMSIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+CjxyZWN0IG9wYWNpdHk9IjAuOSIgeD0iNzkuODY1OCIgd2lkdGg9IjguNjM0MTUiIGhlaWdodD0iOC42MzQxNSIgcng9IjQuMzE3MDciIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=");
-      position: absolute;
-      bottom: 0;
-      right: 20rem;
+    @include media("<tab") {
+      margin: -24.7rem auto 0;
+      order: -1;
+      max-width: 37.3rem;
     }
 
     .exchangeAppInfoContent__bg-wrapper-img {
@@ -2792,38 +2823,74 @@
   }
 }
 
+.exchangeAppFooterBookProject-button {
+  font-weight: bold;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  color: #000000;
+  padding: 1.6rem 6.2rem;
+  background: #FFFFFF;
+  border-radius: 0.7rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 //------------
 
+//ready
 .exchangeAppDetails {
-  padding: 110.5rem 0 20rem;
+  padding-bottom: 8rem;
+  overflow-x: hidden;
+
+  @include media("<tab") {
+    padding-bottom: 7.5rem;
+    padding-top: 15rem;
+  }
 
   .exchangeAppDetails__title-wrapper {
     position: relative;
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 7.8rem;
+
+    @include media("<tab") {
+      margin-bottom: 5.6rem;
+    }
 
     .exchangeAppDetails__title-down {
-      font-size: 48.9rem;
+      font-size: 35.5rem;
       line-height: 0.7;
       color: rgba(28,28,28,255);
       text-shadow: 2px 2px 0 rgba(37,37,37,255), 2px -2px 0 rgba(37,37,37,255), -2px 2px 0 rgba(37,37,37,255), -2px -2px 0 rgba(37,37,37,255), 2px 0px 0 rgba(37,37,37,255), 0px 2px 0 rgba(37,37,37,255), -2px 0px 0 rgba(37,37,37,255), 0px -2px 0 rgba(37,37,37,255);
+
+      @include media("<tab") {
+        font-size: 13.2rem;
+      }
     }
 
     .exchangeAppDetails__title-up {
       width: 100%;
-      font-size: 9.6rem;
-      line-height: 12rem;
+      font-size: 6rem;
+      line-height: 8.7rem;
       color: #fff;
       position: absolute;
       left: 50%;
       top: 70%;
       transform: translate(-50%, -50%);
+
+      @include media("<tab") {
+        font-size: 3.7rem;
+        line-height: 3.2rem;
+      }
     }
   }
 
   .exchangeAppDetails-wrapper {
     display: flex;
     justify-content: space-between;
+
+    @include media("<tab") {
+      flex-wrap: wrap;
+    }
   }
 
   .exchangeAppDetails__titles {
@@ -2831,14 +2898,20 @@
     justify-content: space-between;
     flex-wrap: wrap;
     flex-basis: 40%;
-    margin-left: 7rem;
+    margin-left: 3.7rem;
+
+    @include media("<tab") {
+      flex-basis: 100%;
+      margin-left: 0;
+      margin-bottom: 6.7rem;
+    }
 
     .exchangeAppDetails__titles-item {
       width: 50%;
 
       span {
         display: inline-block;
-        font-size: 1.2rem;
+        font-size: 0.87rem;
         letter-spacing: -0.04em;
         color: rgba(255, 255, 255, 0.44);
         margin-bottom: 1.3rem;
@@ -2850,19 +2923,34 @@
     }
 
     .exchangeAppDetails__titles-first p {
-      font-size: 2.4rem;
-      line-height: 3.2rem;
+      font-size: 1.74rem;
+      line-height: 2.3rem;
+
+      @include media("<tab") {
+        font-size: 1.83rem;
+        line-height: 2.4rem;
+      }
     }
 
     .exchangeAppDetails__titles-third p {
-      font-size: 1.5rem;
-      line-height: 2.4rem;
+      font-size: 1rem;
+      line-height: 1.7rem;
+
+      @include media("<tab") {
+        font-size: 1.14rem;
+        line-height: 1.8rem;
+      }
     }
 
     .exchangeAppDetails__titles-fouth p,
     .exchangeAppDetails__titles-second p {
-      font-size: 1.7rem;
-      line-height: 2.4rem;
+      font-size: 1.23rem;
+      line-height: 1.7rem;
+
+      @include media("<tab") {
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+      }
     }
   }
 
@@ -2870,11 +2958,16 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    flex-basis: 30%;
-    margin-right: 7rem;
+    margin-right: 1.15rem;
+    flex-basis: 29.8rem;
+    gap: 4.9rem;
+
+    @include media("<tab") {
+      flex-basis: 100%;
+      gap: 4%;
+    }
 
     .exchangeAppDetails__color-wrapper {
-      width: 50%;
 
       &:first-child .exchangeAppDetails__color {
         background-color: #40FFD1;
@@ -2897,90 +2990,140 @@
       }
 
       .exchangeAppDetails__color {
-        width: 17.1rem;
-        height: 17.1rem;
+        width: 12.4rem;
+        height: 12.4rem;
         text-align: center;
-        line-height: 17.1rem;
+        line-height: 12.4rem;
+        font-size: 1.3rem;
         font-weight: normal;
         letter-spacing: -0.04em;
         border-radius: 15rem;
-        margin-bottom: 6.8rem;
+
+        @include media("<tab") {
+          font-size: 0.8rem;
+          width: 7.8rem;
+          height: 7.8rem;
+          line-height: 7.8rem;
+        }
       }
     }
   }
 }
 
+//ready
 .exchangeAppAbout {
-  padding: 20rem 38.6rem 30rem 46.5rem;
+  padding: 8rem 0;
+  max-width: 67%;
+  margin: 0 auto;
+
+  @include media("<tab") {
+    padding: 7.5rem 0;
+    max-width: 100%;
+  }
 
   .exchangeAppAbout__title {
     font-size: 4.8rem;
     line-height: 4.5rem;
     color: #FFFFFF;
-    margin-left: calc(100% - 40rem);
-    margin-bottom: 8rem;
+    margin-left: calc(100% - 34.4rem);
+    margin-bottom: 6.4rem;
+
+    @include media("<tab") {
+      font-size: 2rem;
+      line-height: 2.1rem;
+      margin-bottom: 1.1rem;
+      margin-left: 0;
+    }
 
     &:after {
       content: '';
       display: block;
-      margin-top: 1.85rem;
+      margin-top: 1.5rem;
       background-color: #fff;
       height: 1px;
-      width: 40rem;
+      width: 34.4rem;
+
+      @include media("<tab") {
+        width: 11.2rem;
+        margin-top: 0.76rem;
+      }
     }
   }
 
   .exchangeAppAbout-description {
-    font-size: 2.5rem;
-    line-height: 3.7rem;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
     color: #ECECEC;
     position: relative;
+    padding: 0 5rem;
+
+    @include media("<tab") {
+      font-size: 1.2rem;
+      line-height: 1.7rem;
+      padding: 5.3rem 0 0;
+    }
 
     &:before {
       content: 'Exchange app';
       position: absolute;
-      left: -15.7rem;
+      left: -9.2rem;
       top: 0;
       bottom: 0;
       display: inline-block;
-      font-size: 7.2rem;
-      line-height: 10rem;
+      font-size: 6rem;
+      line-height: 8.2rem;
       color: #FFFFFF;
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
       transform: rotate(-90deg);
       white-space: nowrap;
+
+      @include media("<tab") {
+        font-size: 2.9rem;
+        line-height: 4.7rem;
+        transform: rotate(0deg);
+        left: 0;
+      }
     }
   }
 }
 
+//shit
 .exchangeAppInterface {
   display: flex;
   justify-content: space-between;
-  padding-top: 30rem;
+  padding-top: 19rem;
+
+  @include media("<tab") {
+    display: none;
+  }
 
   .exchangeAppInterface__img-wrapper {
-    height: 64.8rem;
+    height: 57.7rem;
+    margin-left: 2.8rem;
 
   .exchangeAppInterface__img {
       max-width: 100%;
       max-height: 100%;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
     }
   }
 
   .exchangeAppInterface__info-wrapper {
-    max-width: 37.9rem;
+    max-width: 24.6rem;
 
     .exchangeAppInterface__title {
-      font-size: 7.2rem;
+      font-size: 6rem;
+      line-height: 1;
       color: #FFFFFF;
       text-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
-      margin-bottom: 6rem;
+      margin-bottom: 2rem;
     }
 
     .exchangeAppInterface__description {
-      font-size: 2.5rem;
-      line-height: 4.2rem;
+      font-size: 1.6rem;
+      line-height: 2.7rem;
       color: #ECECEC;
     }
   }
@@ -2992,7 +3135,7 @@
       text-align: center;
 
       &:not(:last-child) {
-        margin-right: 7.4rem;
+        margin-right: 4.8rem;
 
         .exchangeAppInterface__icon-card-img-wrapper {
           &:after {
@@ -3000,7 +3143,7 @@
             display: block;
             border: 2px dashed rgba(48, 48, 48, 0.9);
             position: absolute;
-            width: 7.4rem;
+            width: 4.8rem;
             top: 50%;
             left: 100%;
           }
@@ -3036,41 +3179,45 @@
 .exchangeAppInterfaceContinue {
   display: flex;
   justify-content: space-between;
-  top: -36rem;
-  margin-bottom: -36rem;
+  top: -34rem;
+  margin-bottom: -34rem;
   z-index: -1;
   position: relative;
-  padding-bottom: 25rem;
+  padding-bottom: 5rem;
+
+  @include media("<tab") {
+    display: none;
+  }
 
   &:after {
     content: '';
     display: inline-block;
     background: #2CDAB0;
-    border-radius: 3rem;
+    border-radius: 1.9rem;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     width: 100%;
-    height: 82rem;
+    height: 53.3rem;
     z-index: -1;
   }
 
   .exchangeAppInterfaceContinue__zippy {
-    margin-left: 7rem;
-    margin-top: 134.8rem;
-    max-width: 37.9rem;
+    margin-left: 0;
+    margin-top: 87.6rem;
+    max-width: 23.6rem;
 
     .exchangeAppInterfaceContinue__zippy-img {
-      width: 36.3rem;
-      height: 27.4rem;
-      margin-bottom: 25rem;
+      width: 26.6rem;
+      height: 17.8rem;
+      margin-bottom: 13.5rem;
       position: relative;
     }
 
     .exchangeAppInterfaceContinue__zippy-decription {
-      font-size: 2.5rem;
-      line-height: 4.2rem;
+      font-size: 1.6rem;
+      line-height: 2.7rem;
       color: #ECECEC;
     }
   }
@@ -3078,46 +3225,44 @@
   .exchangeAppInterfaceContinue__center {
     display: flex;
     flex-direction: column;
-    margin-top: 24.5rem;
+    margin-top: 15.9rem;
 
     .exchangeAppInterfaceContinue__center-first {
-      margin-bottom: 21.4rem;
-      width: 41.1rem;
-      height: 88.9rem;
+      margin-bottom: 14rem;
+      width: 26.6rem;
+      height: 57.7rem;
     }
 
     .exchangeAppInterfaceContinue__center-second {
-      margin-bottom: 20.7rem;
-      width: 36.3rem;
-      height: 27.4rem;
+      margin-bottom: 13.6rem;
+      width: 23.6rem;
+      height: 17.8rem;
     }
   }
 
   .exchangeAppInterfaceContinue__minicard {
     display: flex;
     flex-direction: column;
-    margin-right: 19rem;
-    margin-top: 24.5rem;
+    margin-right: 11.3rem;
+    margin-top: 15.9rem;
 
     .exchangeAppInterfaceContinue__minicard-first {
-      margin-bottom: 20.5rem;
-      width: 21.1rem;
-      height: 45.7rem;
+      margin-bottom: 15rem;
+      width: 15.3rem;
+      height: 33.2rem;
     }
 
     .exchangeAppInterfaceContinue__minicard-second {
-      width: 21.1rem;
-      height: 45.2rem;
+      width: 15.3rem;
+      height: 32.9rem;
     }
   }
 }
 
+//ready
 .exchangeAppPresentationCard {
-  padding: 10rem 0;
-  max-width: 191.4rem;
-  max-height: 172.3rem;
-  width: 100%;
-  height: 100%;
+  max-width: 82.9rem;
+  margin: 0 auto;
 
   .exchangeAppPresentationCard__img {
     width: 100%;
@@ -3126,13 +3271,18 @@
   }
 }
 
+//shit
 .exchangeAppAddNewCard {
-  padding: 20rem 0 20rem 7rem;
+  padding:  10rem 0;
+
+  @include media("<tab") {
+    display: none;
+  }
 
   .exchangeAppAddNewCard__title {
-    font-size: 7.2rem;
-    line-height: 10rem;
-    margin-bottom: 17.1rem;
+    font-size: 6rem;
+    line-height: 7.2rem;
+    margin-bottom: 12.1rem;
     color: #FFFFFF;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
   }
@@ -3143,29 +3293,29 @@
 
     .exchangeAppAddNewCard-content__column:nth-child(2) {
       .exchangeAppAddNewCard-content-small-img-wrapper:first-child {
-        margin-bottom: 19.2rem;
+        margin-bottom: 13.8rem;
       }
     }
 
     .exchangeAppAddNewCard-content__column:last-child {
         .exchangeAppAddNewCard-content__paragraph {
-          margin-bottom: 28rem;
+          margin-bottom: 23rem;
         }
     }
   }
 
   .exchangeAppAddNewCard-content__paragraph {
-    font-size: 2.5rem;
-    line-height: 4.2rem;
+    font-size: 1.6rem;
+    line-height: 3.0rem;
     font-weight: 400;
     color: #ECECEC;
-    max-width: 49.1rem;
+    max-width: 35.2rem;
     width: 100%;
   }
 
   .exchangeAppAddNewCard-steps {
     display: flex;
-    margin-top: 18.2rem;
+    margin-top: 16rem;
 
     .exchangeAppAddNewCard-steps-cards {
       align-items: center;
@@ -3182,25 +3332,30 @@
     }
 
     .exchangeAppAddNewCard-steps-interface {
-      margin-left: 34.4rem;
+      margin-left: auto;
+      margin-right: 20rem;
     }
   }
 }
 
 .exchangeAppRegistrationProfile {
-  padding-top: 25rem;
+  padding-top: 10rem;
+
+  @include media("<tab") {
+    display: none;
+  }
 
   .exchangeAppRegistrationProfile-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    margin-bottom: 28.2rem;
-    padding-right: 36.8rem;
-    padding-left: 7.4rem;
+    margin-bottom: 18.8rem;
+    padding-right: 24.1rem;
+    padding-left: 0;
 
     .exchangeAppRegistrationProfile-header__title {
-      font-size: 7.2rem;
-      line-height: 10rem;
+      font-size: 6rem;
+      line-height: 6.7rem;
       color: #fff;
     }
   }
@@ -3213,19 +3368,20 @@
       content: "";
       display: inline-block;
       background: #2cdab0;
-      border-radius: 3rem;
+      border-radius: 1.9rem;
       position: absolute;
       left: 0;
       top: 0;
       right: 0;
       width: 100%;
-      height: 82rem;
+      height: 57.9rem;
       z-index: -1;
     }
 
     .exchangeAppRegistrationProfile-interfaces__img-wrapper {
-      width: 56.4rem;
-      height: 104.3rem;
+      width: 26.3rem;
+      height: 57.5rem;
+      margin-left: 2.7rem;
 
       .exchangeAppRegistrationProfile-interfaces__img {
         max-width: 100%;
@@ -3239,16 +3395,16 @@
     .exchangeAppRegistrationProfile-interfaces__column {
       &:first-child {
         margin-right: 14.3rem;
-        margin-top: -18rem;
+        margin-top: -10rem;
       }
 
       &:nth-child(2) {
-        margin-right: 21rem;
-        margin-top: 9.6rem;
+        margin-right: 13.5rem;
+        margin-top: 6.1rem;
       }
 
       &:nth-child(3) {
-        margin-top: 9.6rem;
+        margin-top: 6.1rem;
       }
     }
   }
@@ -3257,9 +3413,13 @@
 .exchangeAppRegistrationProfileSteps {
   display: flex;
   justify-content: space-between;
-  padding-left: 7rem;
-  padding-top: 12rem;
-  padding-bottom: 12rem;
+  padding-left: 15.6rem;
+  padding-top: 16rem;
+  padding-bottom: 5rem;
+
+  @include media("<tab") {
+    display: none;
+  }
 
   .exchangeAppRegistrationProfileSteps__column:nth-child(2) {
     .exchangeCards__column {
@@ -3290,10 +3450,10 @@
 
   .exchangeAppRegistrationProfileSteps__paragraph {
     font-weight: 400;
-    font-size: 2.5rem;
-    line-height: 4.2rem;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
     color: #ECECEC;
-    max-width: 40rem;
+    max-width: 25.7rem;
   }
 }
 
@@ -3305,6 +3465,10 @@
   padding-top: 10rem;
   padding-bottom: 10rem;
 
+  @include media("<tab") {
+    display: none;
+  }
+
   &:after {
     content: '';
     display: inline-block;
@@ -3315,32 +3479,34 @@
     top: 53rem;
     right: 0;
     width: 100%;
-    height: 82rem;
+    height: 53rem;
     z-index: -1;
   }
 
   .exchangeAppRegistrationProfileContinue__large-img-wrapper {
-    margin-left: 7rem;
+    margin-left: 2.7rem;
   }
 
   .exchangeAppRegistrationProfileContinue__count {
-    margin-top: 14.1rem;
+    margin-top: 9.2rem;
     margin-left: 16rem;
   }
 
   .exchangeAppRegistrationProfileContinue__paragraph {
-    margin-top: 20rem;
-    font-size: 2.5rem;
-    line-height: 4.2rem;
+    margin-top: 10rem;
+    font-size: 1.6rem;
+    line-height: 2.7rem;
     font-weight: 400;
     color: #ECECEC;
     max-width: 37.9rem;
   }
 }
 
+
+//ready
 .exchangeAppFooter {
   padding-top: 20rem;
-  padding-bottom: 20rem;
+  padding-bottom: 5rem;
 
   .exchangeAppFooter__img-wrapper {
     width: 100%;
@@ -3356,4 +3522,9 @@
       object-fit: cover;
     }
   }
+}
+
+.exchangeAppFooterBookProject {
+  padding: 5rem 0 15rem;
+  text-align: center;
 }
