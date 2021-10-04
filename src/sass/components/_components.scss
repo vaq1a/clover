@@ -3488,11 +3488,11 @@
     column-gap: 10%;
   }
 
-  .exchange-registration-profile-continue_mb {
+  &.exchange-registration-profile-continue_mb {
     margin-bottom: 20rem;
 
     @include media("<tab") {
-      margin-bottom: 4rem;
+      margin-bottom: 10rem;
     }
   }
 
