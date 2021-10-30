@@ -2606,436 +2606,9 @@
 }
 
 
-//exchange app
-
-//modify
-.exchangeCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .exchangeCard__title {
-    font-size: 1.4rem;
-    line-height: 1.6rem;
-    text-align: center;
-    color: #555353;
-    margin-bottom: 1.2rem;
-  }
-
-  .exchangeCard__icon-wrapper {
-    width: 9.8rem;
-    height: 19.2rem;
-
-    &.exchangeCard__icon-wrapper_dashed-right-line {
-      position: relative;
-
-      &:after {
-        content: "";
-        display: block;
-        border: 2px dashed rgba(48,48,48,.9);
-        position: absolute;
-        width: 5.5rem;
-        top: 50%;
-        left: 100%;
-      }
-    }
-
-    &.exchangeCard__icon-wrapper_dashed-injection-line:before {
-      content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTUiIGhlaWdodD0iMTY4IiB2aWV3Qm94PSIwIDAgOTUgMTY4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMSAxTDEgMTU3QzEgMTYyLjUyMyA1LjQ3NzE1IDE2NyAxMSAxNjdIOTQiIHN0cm9rZT0iIzNGM0YzRiIgc3Ryb2tlLW9wYWNpdHk9IjAuNjgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWRhc2hhcnJheT0iNSA1Ii8+Cjwvc3ZnPgo=");
-      position: absolute;
-      top: 100%;
-      left: 50%;
-    }
-
-    .exchangeCard__icon {
-      width: 100%;
-      height: 100%;
-      max-height: 100%;
-      max-width: 100%;
-      object-fit: cover;
-    }
-  }
-}
-
-.exchangeCards {
-  display: flex;
-  flex-direction: column;
-
-  .exchangeCards__column {
-    display: flex;
-  }
-}
-
-
-
-//-------------
-.exchangeAppImage-greenBg {
-  background: #2CDAB0;
-  border-radius: 3rem;
-  position: relative;
-  width: 100%;
-  height: 50rem;
-}
-
-//------------
-
-//edit
-.exchangeAppInterface {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 19rem;
-
-  @include media("<tab") {
-    display: none;
-  }
-
-  .exchangeAppInterface__img-wrapper {
-    height: 57.7rem;
-    margin-left: 2.8rem;
-
-  .exchangeAppInterface__img {
-      max-width: 100%;
-      max-height: 100%;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .exchangeAppInterface__info-wrapper {
-    max-width: 24.6rem;
-
-    .exchangeAppInterface__title {
-      font-size: 6rem;
-      line-height: 1;
-      color: #FFFFFF;
-      text-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
-      margin-bottom: 2rem;
-    }
-
-    .exchangeAppInterface__description {
-      font-size: 1.6rem;
-      line-height: 2.7rem;
-      color: #ECECEC;
-    }
-  }
-
-  .exchangeAppInterface__icon-cards {
-    display: flex;
-
-    .exchangeAppInterface__icon-card {
-      text-align: center;
-
-      &:not(:last-child) {
-        margin-right: 4.8rem;
-
-        .exchangeAppInterface__icon-card-img-wrapper {
-          &:after {
-            content: "";
-            display: block;
-            border: 2px dashed rgba(48, 48, 48, 0.9);
-            position: absolute;
-            width: 4.8rem;
-            top: 50%;
-            left: 100%;
-          }
-        }
-      }
-
-      .exchangeAppInterface__icon-card_title {
-        font-weight: bold;
-        font-size: 1.4rem;
-        line-height: 1.6rem;
-        color: #555353;
-        margin-bottom: 1.3rem;
-        white-space: nowrap;
-      }
-
-      .exchangeAppInterface__icon-card-img-wrapper {
-        width: 9.8rem;
-        height: 19.1rem;
-        position: relative;
-
-        .exchangeAppInterface__icon-card_img {
-          width: 100%;
-          height: 100%;
-          max-width: 100%;
-          max-height: 100%;
-          object-fit: cover;
-        }
-      }
-    }
-  }
-}
-
-.exchangeAppInterfaceContinue {
-  display: flex;
-  justify-content: space-between;
-  top: -34rem;
-  margin-bottom: -34rem;
-  z-index: -1;
-  position: relative;
-  padding-bottom: 5rem;
-
-  @include media("<tab") {
-    display: none;
-  }
-
-  &:after {
-    content: '';
-    display: inline-block;
-    background: #2CDAB0;
-    border-radius: 1.9rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 53.3rem;
-    z-index: -1;
-  }
-
-  .exchangeAppInterfaceContinue__zippy {
-    margin-left: 0;
-    margin-top: 87.6rem;
-    max-width: 23.6rem;
-
-    .exchangeAppInterfaceContinue__zippy-img {
-      width: 26.6rem;
-      height: 17.8rem;
-      margin-bottom: 13.5rem;
-      position: relative;
-    }
-
-    .exchangeAppInterfaceContinue__zippy-decription {
-      font-size: 1.6rem;
-      line-height: 2.7rem;
-      color: #ECECEC;
-    }
-  }
-
-  .exchangeAppInterfaceContinue__center {
-    display: flex;
-    flex-direction: column;
-    margin-top: 15.9rem;
-
-    .exchangeAppInterfaceContinue__center-first {
-      margin-bottom: 14rem;
-      width: 26.6rem;
-      height: 57.7rem;
-    }
-
-    .exchangeAppInterfaceContinue__center-second {
-      margin-bottom: 13.6rem;
-      width: 23.6rem;
-      height: 17.8rem;
-    }
-  }
-
-  .exchangeAppInterfaceContinue__minicard {
-    display: flex;
-    flex-direction: column;
-    margin-right: 11.3rem;
-    margin-top: 15.9rem;
-
-    .exchangeAppInterfaceContinue__minicard-first {
-      margin-bottom: 15rem;
-      width: 15.3rem;
-      height: 33.2rem;
-    }
-
-    .exchangeAppInterfaceContinue__minicard-second {
-      width: 15.3rem;
-      height: 32.9rem;
-    }
-  }
-}
-
-.exchangeAppAddNewCard {
-  padding:  10rem 0;
-
-  @include media("<tab") {
-    display: none;
-  }
-
-  .exchangeAppAddNewCard__title {
-    font-size: 6rem;
-    line-height: 7.2rem;
-    margin-bottom: 12.1rem;
-    color: #FFFFFF;
-    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.17);
-  }
-
-  .exchangeAppAddNewCard-content {
-    display: flex;
-    justify-content: space-between;
-
-    .exchangeAppAddNewCard-content__column:nth-child(2) {
-      .exchangeAppAddNewCard-content-small-img-wrapper:first-child {
-        margin-bottom: 13.8rem;
-      }
-    }
-
-    .exchangeAppAddNewCard-content__column:last-child {
-        .exchangeAppAddNewCard-content__paragraph {
-          margin-bottom: 23rem;
-        }
-    }
-  }
-
-  .exchangeAppAddNewCard-content__paragraph {
-    font-size: 1.6rem;
-    line-height: 3.0rem;
-    font-weight: 400;
-    color: #ECECEC;
-    max-width: 35.2rem;
-    width: 100%;
-  }
-
-  .exchangeAppAddNewCard-steps {
-    display: flex;
-    margin-top: 16rem;
-
-    .exchangeAppAddNewCard-steps-cards {
-      align-items: center;
-
-      .exchangeAppAddNewCard-steps-cards__column {
-        &:first-child {
-          margin-bottom: 4.8rem;
-        }
-
-        .exchangeAppAddNewCard-steps-cards__item:not(:last-child) {
-          margin-right: 4.8rem;
-        }
-      }
-    }
-
-    .exchangeAppAddNewCard-steps-interface {
-      margin-left: auto;
-      margin-right: 20rem;
-    }
-  }
-}
-
-.exchangeAppRegistrationProfile {
-  padding-top: 10rem;
-
-  @include media("<tab") {
-    display: none;
-  }
-
-  .exchangeAppRegistrationProfile-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    margin-bottom: 18.8rem;
-    padding-right: 24.1rem;
-    padding-left: 0;
-
-    .exchangeAppRegistrationProfile-header__title {
-      font-size: 6rem;
-      line-height: 6.7rem;
-      color: #fff;
-    }
-  }
-
-  .exchangeAppRegistrationProfile-interfaces {
-    position: relative;
-    display: flex;
-
-    &:after {
-      content: "";
-      display: inline-block;
-      background: #2cdab0;
-      border-radius: 1.9rem;
-      position: absolute;
-      left: 0;
-      top: 0;
-      right: 0;
-      width: 100%;
-      height: 57.9rem;
-      z-index: -1;
-    }
-
-    .exchangeAppRegistrationProfile-interfaces__img-wrapper {
-      width: 26.3rem;
-      height: 57.5rem;
-      margin-left: 2.7rem;
-
-      .exchangeAppRegistrationProfile-interfaces__img {
-        max-width: 100%;
-        max-height: 100%;
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-    }
-
-    .exchangeAppRegistrationProfile-interfaces__column {
-      &:first-child {
-        margin-right: 14.3rem;
-        margin-top: -10rem;
-      }
-
-      &:nth-child(2) {
-        margin-right: 13.5rem;
-        margin-top: 6.1rem;
-      }
-
-      &:nth-child(3) {
-        margin-top: 6.1rem;
-      }
-    }
-  }
-}
-
-.exchangeAppRegistrationProfileSteps {
-  display: flex;
-  justify-content: space-between;
-  padding-left: 15.6rem;
-  padding-top: 16rem;
-  padding-bottom: 5rem;
-
-  @include media("<tab") {
-    display: none;
-  }
-
-  .exchangeAppRegistrationProfileSteps__column:nth-child(2) {
-    .exchangeCards__column {
-      &:first-child {
-        margin-bottom: 5.6rem;
-        .exchangeCard {
-          &:not(:last-child) {
-            margin-right: 6rem;
-          }
-        }
-      }
-
-      &:last-child {
-        .exchangeCard {
-          &:first-child {
-            margin-right: 4rem;
-          }
-          &:nth-child(2) {
-            margin-right: 2.7rem;
-          }
-          &:nth-child(3) {
-            margin-right: 4.2rem;
-          }
-        }
-      }
-    }
-  }
-
-  .exchangeAppRegistrationProfileSteps__paragraph {
-    font-weight: 400;
-    font-size: 1.6rem;
-    line-height: 2.7rem;
-    color: #ECECEC;
-    max-width: 25.7rem;
-  }
-}
-
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!! -- EXCHANGE APP START -- !!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
 //components
 //images
@@ -3044,23 +2617,57 @@
   max-width: 13.6rem;
   height: auto;
 
+  @include media("<tab") {
+    max-width: 15.3rem;
+  }
+
   img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.exchange-img-md {
+  width: 100%;
+  max-width: 23.6rem;
+  height: auto;
+
+  img {
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
 .exchange-img-lg {
-  width: 100%;
   max-width: 26.3rem;
   height: auto;
 
+  @include media("<tab") {
+    max-width: 15.3rem;
+  }
+
   img {
+    width: 100%;
     max-width: 100%;
     height: auto;
   }
 }
 
+//title
+.exchange__title {
+  font-size: 6rem;
+  line-height: 8.7rem;
+  color: #fff;
+
+  @include media("<tab") {
+    font-size: 3.7rem;
+    line-height: 3.2rem;
+  }
+}
+
+//paragraph
 .exchange-paragraph {
   font-size: 1.6rem;
   line-height: 2.7rem;
@@ -3073,6 +2680,7 @@
   }
 }
 
+//count
 .exchange-count {
   font-size: 1.6rem;
   line-height: 2.9rem;
@@ -3090,6 +2698,65 @@
     width: 13rem;
     height: 1px;
     background-color: #8C8C8C;
+  }
+}
+
+//card
+.exchange-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 6.3rem;
+
+  .exchange-card__title {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    line-height: 1;
+    text-align: center;
+    color: #555353;
+    margin-bottom: 0.8rem;
+    white-space: nowrap;
+
+    @include media("<tab") {
+      font-size: 0.77rem;
+    }
+  }
+
+  .exchange-card__img-wrapper {
+    padding-top: 1.7rem;
+
+    .exchange-card__img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    &.exchange-card__img-wrapper-dashed-right-line {
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        border: 2px dashed rgba(48,48,48,.9);
+        position: absolute;
+        width: 3.3rem;
+        top: 50%;
+        left: 100%;
+      }
+    }
+
+    //&.exchange-card__img-wrapper-dashed-injection-line:before {
+    //  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOTUiIGhlaWdodD0iMTY4IiB2aWV3Qm94PSIwIDAgOTUgMTY4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMSAxTDEgMTU3QzEgMTYyLjUyMyA1LjQ3NzE1IDE2NyAxMSAxNjdIOTQiIHN0cm9rZT0iIzNGM0YzRiIgc3Ryb2tlLW9wYWNpdHk9IjAuNjgiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InNxdWFyZSIgc3Ryb2tlLWRhc2hhcnJheT0iNSA1Ii8+Cjwvc3ZnPgo=");
+    //  position: absolute;
+    //  top: 100%;
+    //  left: 50%;
+    //
+    //  @include media("<tab") {
+    //    display: none;
+    //  }
+    //}
   }
 }
 
@@ -3224,6 +2891,15 @@
       margin-bottom: 5.6rem;
     }
 
+    .exchange__title_position {
+      width: 100%;
+      position: absolute;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+
+    }
+
     .exchange-typography__title-bg {
       font-size: 35.5rem;
       line-height: 0.7;
@@ -3232,22 +2908,6 @@
 
       @include media("<tab") {
         font-size: 13.2rem;
-      }
-    }
-
-    .exchange-typography__title {
-      width: 100%;
-      font-size: 6rem;
-      line-height: 8.7rem;
-      color: #fff;
-      position: absolute;
-      left: 50%;
-      top: 70%;
-      transform: translate(-50%, -50%);
-
-      @include media("<tab") {
-        font-size: 3.7rem;
-        line-height: 3.2rem;
       }
     }
   }
@@ -3333,6 +2993,7 @@
     @include media("<tab") {
       flex-basis: 100%;
       gap: 4%;
+      margin-right: 0;
     }
 
     .exchange-typography-colors__item:first-child {
@@ -3370,6 +3031,7 @@
         width: 7.8rem;
         height: 7.8rem;
         line-height: 7.8rem;
+        margin-bottom: 2rem;
       }
     }
   }
@@ -3377,7 +3039,7 @@
 
 //exchange about
 .exchange-about {
-  padding-bottom: 26.8rem;
+  padding-bottom: 26rem;
   max-width: 67%;
   margin: 0 auto;
 
@@ -3452,11 +3114,337 @@
   }
 }
 
-//more sections
+//exchange interface
+.exchange-interface {
+  display: flex;
+  justify-content: space-between;
+
+  &.exchange-green-bg {
+    position: relative;
+
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 23rem;
+      right: 0;
+      z-index: -1;
+      content: '';
+      display: block;
+      height: 55.3rem;
+      width: 100%;
+      background: #2CDAB0;
+      border-radius: 2rem;
+
+      @include media("<tab") {
+        display: none;
+      }
+    }
+  }
+
+  @include media("<tab") {
+    flex-wrap: wrap;
+  }
+
+  .exchange-interface__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media("<tab") {
+      align-items: start;
+      max-width: 100% !important;
+      width: 100%;
+    }
+
+    .exchange-img-lg,
+    .exchange-img-xs {
+      @include media("<tab") {
+        display: none;
+      }
+    }
+  }
+
+  .exchange-interface__cell:first-child {
+    margin-left: 2.8rem;
+    max-width: 26.6rem;
+    width: 100%;
+
+    @include media("<tab") {
+      display: none;
+    }
+  }
+
+  .exchange-interface__cell:nth-child(2) {
+    max-width: 26.6rem;
+
+    .exchange-img-lg_position {
+      margin-top: 17rem;
+    }
+
+    .exchange-interface__info {
+      .exchange-paragraph {
+        margin: 2rem 0 5rem;
+      }
+    }
+  }
+
+  .exchange-interface__cell:nth-child(3) {
+    .exchange-interface__minicards {
+      margin-top: 27rem;
+
+      @include media("<tab") {
+        display: none;
+      }
+
+      .exchange-img-xs:not(:last-child) {
+        margin-bottom: 15rem;
+      }
+    }
+  }
+
+  .exchange-cards {
+    display: flex;
+
+    @include media("<tab") {
+      justify-content: space-around;
+      width: 100%;
+      margin-bottom: 6.2rem;
+    }
+
+    .exchange-card {
+      .exchange-card__img-wrapper-dashed-right-line:after {
+        @include media("<tab") {
+          display: none;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 3.3rem;
+
+        @include media("<tab") {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}
+
+.exchange-interface-zippy {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 4rem;
+  margin-top: -9.4rem;
+
+  @include media("<tab") {
+    margin-top: 0;
+  }
+
+  .exchange-interface-zippy__cell {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 13.5rem;
+
+    @include media("<tab") {
+      justify-content: space-around;
+      margin-bottom: 4.1rem;
+    }
+  }
+
+  .exchange-interface-zippy__line {
+    height: 1px;
+    width: 10.8rem;
+    opacity: 0.5;
+    background-color: rgba(132, 132, 132, 0.5);
+    margin: 0 2.7rem;
+  }
+
+  .exchange-paragraph_indent {
+    max-width: 24.6rem;
+    margin-right: 15rem;
+
+    @include media("<tab") {
+      margin-right: 7.3rem;
+    }
+  }
+
+  .exchange-count_position {
+    align-self: start;
+  }
+}
+
+.exchange-interface-mobile {
+  display: flex;
+  justify-content: space-around;
+  gap: 2.4rem;
+  margin-bottom: 10.5rem;
+  position: relative;
+  padding: 0 2.4rem;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 15.4rem;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    height: 42.2rem;
+    width: 100%;
+    background: #2CDAB0;
+    border-radius: 0.78rem;
+  }
+
+  @include media(">tab") {
+    display: none;
+  }
+
+  .exchange-interface-mobile__cell {
+    &:last-child {
+      margin-top: 10.5rem;
+    }
+  }
+}
+
+//new card
+.exchange-new-card {
+  padding-bottom:  10rem;
+
+  .exchange__title {
+    margin-bottom: 12.2rem;
+
+    @include media("<tab") {
+      margin-bottom: 2rem;
+    }
+  }
+
+  .exchange-new-card-content {
+    display: flex;
+    justify-content: space-between;
+
+    .exchange-new-card-content__cell {
+      &:first-child {
+        flex-basis: 29.4rem;
+
+        .exchange-img-lg {
+          max-width: 29.4rem;
+        }
+
+        @include media("<tab") {
+          display: none;
+        }
+      }
+
+      &:nth-child(2) {
+        flex-basis: 15.1rem;
+
+        .exchange-img-xs:not(:last-child) {
+          margin-bottom: 13.8rem;
+        }
+
+        @include media("<tab") {
+          display: none;
+        }
+      }
+
+      &:nth-child(3) {
+        flex-basis: 35.2rem;
+
+        @include media("<tab") {
+          flex-basis: 100%;
+        }
+
+        .exchange-paragraph {
+          margin-bottom: 22rem;
+
+          @include media("<tab") {
+            margin-bottom: 3rem;
+          }
+        }
+
+        .exchange-img-xs {
+          @include media("<tab") {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  .exchange-new-card-steps {
+    display: flex;
+    margin-top: 16rem;
+
+    @include media("<tab") {
+      justify-content: center;
+      margin-top: 12rem;
+    }
+
+    .exchange-cards__column {
+      display: flex;
+
+      .exchange-card:not(:last-child) {
+        margin-right: 3.3rem;
+      }
+
+      &:first-child {
+        margin-bottom: 2.5rem;
+      }
+
+      &:nth-child(2) {
+        .exchange-card:first-child {
+          margin-left: 8rem;
+
+          @include media("<tab") {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .exchange-card.hidden {
+      opacity: 0;
+      visibility: hidden;
+
+      @include media(">tab") {
+        display: none;
+      }
+    }
+
+    .exchange-new-card-steps-interface {
+      margin-left: 23.7rem;
+
+      @include media("<tab") {
+        display: none;
+      }
+    }
+  }
+}
+
+.exchange-new-card-mobile {
+  display: flex;
+  justify-content: space-around;
+  gap: 2.4rem;
+  padding: 0 2.4rem;
+
+  @include media(">tab") {
+    display: none;
+  }
+
+  .exchange-new-card-mobile__cell {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      margin-top: 10.5rem;
+    }
+  }
+}
 
 //exchange presentation card
 .exchange-presentation-card {
   max-width: 82.9rem;
+  padding-bottom: 6rem;
   margin: 0 auto;
 
   .exchange-presentation-card__img {
@@ -3466,7 +3454,162 @@
   }
 }
 
-//more sections
+//registration-profile
+.exchange-registration-profile {
+  padding-bottom: 10rem;
+  margin-bottom: 8rem;
+
+  @include media("<tab") {
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .exchange-registration-profile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 11rem;
+    padding-right: 24.1rem;
+
+    @include media("<tab") {
+      padding-right: 0;
+      flex-direction: column;
+      align-items: start;
+    }
+
+    .exchange-count {
+      @include media("<tab") {
+        display: none;
+      }
+    }
+
+    .exchange-paragraph {
+      margin-top: 2rem;
+
+      @include media(">tab") {
+        display: none;
+      }
+    }
+  }
+
+  .exchange-registration-profile-interfaces {
+    position: relative;
+    display: flex;
+
+    @include media("<tab") {
+      display: none;
+    }
+
+    &:after {
+      content: "";
+      display: inline-block;
+      background: #2cdab0;
+      border-radius: 1.9rem;
+      position: absolute;
+      left: 0;
+      top: 7rem;
+      right: 0;
+      width: 100%;
+      height: 57.9rem;
+      z-index: -1;
+    }
+  }
+
+  .exchange-registration-profile-interfaces__column {
+    margin-top: -6rem;
+
+    &:first-child {
+      margin-left: 2.6rem;
+    }
+
+    &:not(:first-child) {
+      margin-top: 13.5rem;
+      margin-left: 14.3rem;
+    }
+  }
+}
+
+.exchange-registration-profile-mobile {
+  display: flex;
+  justify-content: space-around;
+  gap: 2.4rem;
+  margin-bottom: 15rem;
+  position: relative;
+  padding: 0 2.4rem;
+
+  &:after {
+    position: absolute;
+    left: 0;
+    top: 15.4rem;
+    right: 0;
+    z-index: -1;
+    content: '';
+    display: block;
+    height: 34.3rem;
+    width: 100%;
+    background: #2CDAB0;
+    border-radius: 0.78rem;
+  }
+
+  @include media(">tab") {
+    display: none;
+  }
+
+  .exchange-registration-profile-mobile__cell {
+    .exchange-count {
+      margin-top: 24.3rem;
+    }
+
+    &:nth-child(2) {
+      margin-top: 10.5rem;
+    }
+  }
+}
+
+.exchange-registration-profile-steps {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15.6rem;
+  padding-top: 16rem;
+  padding-bottom: 5rem;
+  margin-bottom: 19.6rem;
+
+  @include media("<tab") {
+    display: none;
+  }
+
+  .exchange-registration-profile-steps__column:nth-child(2) {
+    .exchange-сards__column {
+      display: flex;
+      &:first-child {
+        margin-bottom: 5.6rem;
+        .exchange-card {
+          &:not(:last-child) {
+            margin-right: 5.3rem;
+          }
+
+          .exchange-card__img-wrapper:after {
+            width: 5.3rem;
+          }
+        }
+      }
+
+      &:last-child {
+        .exchange-card {
+          margin-right: 5.3rem;
+
+          .exchange-card__img-wrapper:after {
+            width: 5.3rem;
+          }
+        }
+      }
+    }
+  }
+
+  .exchange-registration-profile-steps__column:nth-child(3) {
+    max-width: 25.7rem;
+  }
+}
 
 //exchange registration profile continue
 .exchange-registration-profile-continue {
@@ -3474,6 +3617,9 @@
   justify-content: space-between;
   justify-items: end;
   row-gap: 9rem;
+  margin-bottom: 20rem;
+  position: relative;
+  padding-left: 2.4rem;
 
   @include media(">tab") {
     grid-template-columns: repeat(2, auto) 27rem;
@@ -3486,13 +3632,28 @@
     grid-template-columns: repeat(2, 45%);
     justify-items: center;
     column-gap: 10%;
+    margin-bottom: 10rem;
+    padding: 0 2.4rem;
   }
 
-  &.exchange-registration-profile-continue_mb {
-    margin-bottom: 20rem;
+  &.exchange-registration-profile-continue_green-bg {
+    &:after {
+      position: absolute;
+      left: 0;
+      top: 20rem;
+      right: 0;
+      z-index: -1;
+      content: '';
+      display: block;
+      height: 57.4rem;
+      width: 100%;
+      background: #2CDAB0;
+      border-radius: 0.78rem;
 
-    @include media("<tab") {
-      margin-bottom: 10rem;
+      @include media("<tab") {
+        height: 24.2rem;
+        top: 15rem;
+      }
     }
   }
 
@@ -3573,3 +3734,7 @@
     cursor: pointer;
   }
 }
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!! -- EXCHANGE APP END -- !!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
