@@ -6,24 +6,29 @@
     background-color: #8B58CD;
 }
 
+.vegan-page .wbg {
+    overflow: visible;
+    position: absolute;
+}
+
 /*vegan components*/
 /*vegan-count*/
 .vegan-count {
-    font-family:Montserrat,Helvetica,Arial,sans-serif;
-    font-size: 5.472rem;
-    line-height: 8.9rem;
+    font-family: Montserrat,Helvetica,Arial,sans-serif;
+    font-size: 3.472rem;
+    line-height: 5.9rem;
     font-weight: bold;
     color: #fff;
     background: #D3E787;
-    box-shadow: 0 0 5rem #D3E787;
+    box-shadow: 0 0 5rem #d3e787;
     border-radius: 50%;
-    width: 8.9rem;
-    min-width: 8.9rem;
-    height: 8.9rem;
+    width: 5.9rem;
+    min-width: 5.9rem;
+    height: 5.9rem;
     text-align: center;
 }
 
-@media (max-width:639px) {
+@media (max-width:767px) {
     .vegan-count {
         font-size: 2.4rem;
         line-height: 3.2rem;
@@ -69,7 +74,7 @@
     line-height: 3rem;
 }
 
-@media (max-width:639px) {
+@media (max-width:767px) {
     .vegan-typography-example__title {
         font-size: 1.1rem;
         line-height: 1.4rem;
@@ -119,6 +124,12 @@
     height: 8.9rem;
 }
 
+@media (max-width:767px) {
+    .vegan-color__bg {
+        height: 7.7rem;
+    }
+}
+
 .vegan-color__bg.vegan-color__bg_one {
     background-color: #AED910;
 }
@@ -139,7 +150,7 @@
     background-color: #ADAAAA;
 }
 
-@media (max-width:639px) {
+@media (max-width:767px) {
     .vegan-color__text {
         font-size: 1.06326rem;
         line-height: 1.4rem;
@@ -175,6 +186,14 @@
 
 .vegan-img-wrapper.vegan-img-wrapper_large {
     max-width: 37.5rem;
+}
+
+.vegan-img-wrapper.vegan-img-wrapper-mobile-only {
+    display: none;
+}
+
+.vegan-img-wrapper.vegan-img-wrapper-desktop-only {
+    display: block;
 }
 
 .vegan-img-wrapper.vegan-img-wrapper_with-shadow {
@@ -238,15 +257,15 @@
 
 .vegan-preview__title {
     font-family:Montserrat,Helvetica,Arial,sans-serif;
-    font-size: 13.5rem;
-    line-height: 13rem;
+    font-size: 8.5rem;
+    line-height: 1;
     font-weight: bold;
     color: #fff;
 }
 
 .vegan-preview__bg {
     position: relative;
-    max-width: 74.4rem;
+    max-width: 60rem;
     width: 100%;
 }
 
@@ -255,7 +274,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 71.6rem;
+    max-width: 60rem;
     width: 100%;
 }
 
@@ -267,9 +286,14 @@
     background: #FFFFFF;
     box-shadow: 0 -0.748491rem 14.9698rem rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    height: 74.4rem;
-    min-width: 74.4rem;
+    max-width: 60rem;
     width: 100%;
+}
+
+.vegan-preview__bg-circle:after {
+    content: '';
+    display: block;
+    padding-bottom: 100%;
 }
 
 /*vegan-steps-wrapper*/
@@ -287,7 +311,7 @@
 .vegan-steps__count {
     position: absolute;
     top: -2.4rem;
-    left: 26.6rem;
+    left: 12.5rem;
 }
 
 .vegan-steps-titles {
@@ -298,8 +322,8 @@
 .vegan-steps-titles__title {
     font-family:Montserrat,Helvetica,Arial,sans-serif;
     font-weight: bold;
-    font-size: 5.472rem;
-    line-height: 6.8rem;
+    font-size: 4.472rem;
+    line-height: 5.8rem;
     color: #FFFFFF;
     margin-right: 7.6rem;
 }
@@ -314,12 +338,12 @@
 
 .vegan-steps-titles__indent {
     margin-bottom: 18rem;
+    margin-left: 3.8rem;
 }
 
 /*vegan-typography*/
 .vegan-typography {
-    padding-top: 13.5rem;
-    padding-bottom: 12.5rem;
+    padding: 12.5rem;
 }
 
 .vegan-typography__count {
@@ -333,8 +357,8 @@
 .vegan-typography__font {
     font-family: 'Nunito', sans-serif;
     font-weight: bold;
-    font-size: 17rem;
-    line-height: 30rem;
+    font-size: 10rem;
+    line-height: 13rem;
     color: #FFFFFF;
     margin-bottom: 5.5rem;
 }
@@ -342,6 +366,7 @@
 .vegan-typography-examples {
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
     margin-bottom: 10.6rem;
 }
 
@@ -352,8 +377,7 @@
 
 /*vegan-wireframing*/
 .vegan-wireframing {
-    padding-top: 12.5rem;
-    padding-bottom: 12.5rem;
+    padding: 12.5rem;
 }
 
 .vegan-wireframing__count {
@@ -385,10 +409,25 @@
 
 /*vegan-recepie*/
 .vegan-recepie {
+    position: relative;
+}
+
+.vegan-recepie-bg {
+    position: absolute;
+    top: 53.4rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 118.3rem;
+    width: 100%;
+    background: #A478DC;
+    border-radius: 5rem;
+}
+
+.vegan-recepie-wrapper {
     display: flex;
     justify-content: space-between;
-    padding-top: 12.5rem;
-    padding-bottom: 15rem;
+    padding: 12.5rem 12.5rem 15rem;
 }
 
 .vegan-recepie__count {
@@ -436,12 +475,16 @@
     margin-bottom: 8.8rem;
 }
 
+.vegan-img-wrapper.vegan-img-wrapper_top-indent {
+    margin-top: 8.8rem;
+}
+
 /*vegan-recept*/
 .vegan-recept {
     display: flex;
     justify-content: space-between;
-    padding-top: 15rem;
-    padding-bottom: 12.5rem;
+    padding: 15rem 12.5rem 12.5rem;
+    gap: 4rem;
 }
 
 .vegan-recept__column {
@@ -468,14 +511,14 @@
 
 .vegan-recept__promo-title-usual {
     font-family:Montserrat,Helvetica,Arial,sans-serif;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 3.73051rem;
     line-height: 4.1rem;
     color: #FFFFFF;
 }
 
 .vegan-recept__promo-title-unusual {
-    font-family: Sriracha,Arial,sans-serif;
+    font-family: 'Sriracha', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 6.82153rem;
@@ -489,8 +532,7 @@
 
 /*vegan-calendar*/
 .vegan-calendar {
-    padding-top: 12.5rem;
-    padding-bottom: 12.5rem;
+    padding: 12.5rem;
 }
 
 .vegan-calendar__count {
@@ -515,6 +557,11 @@
 
 .vegan-navigation__count {
     margin-bottom: 2.5rem;
+    margin-left: 12.5rem;
+}
+
+.vegan-navigation__title {
+    margin-left: 12.5rem;
 }
 
 .vegan-navigation-images {
@@ -558,4 +605,286 @@
 
 .vegan-footer .vegan-footer__image {
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    .vegan-preview {
+        flex-direction: column;
+        padding-top: 9.4rem;
+        padding-bottom: 5rem;
+    }
+
+    .vegan-preview__title {
+        font-size: 6.02958rem;
+        margin-bottom: 10rem;
+    }
+
+    .vegan-typography,
+    .vegan-wireframing,
+    .vegan-recepie-wrapper,
+    .vegan-recept,
+    .vegan-calendar {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .vegan-steps {
+        padding: 6rem 3rem;
+        border-radius: 1.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .vegan-steps-titles__indent {
+        margin-left: 0;
+        margin-bottom: 5.3rem;
+    }
+
+    .vegan-steps-titles {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .vegan-steps__count {
+        top: -1.4rem;
+        left: 3rem;
+    }
+
+    .vegan-steps-titles__title {
+        font-size: 3rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+
+    .vegan-steps-titles__subtitle {
+        font-size: 1.8rem;
+        line-height: 2.1rem;
+    }
+
+    .vegan-typography__count,
+    .vegan-wireframing__count,
+    .vegan-recepie__count,
+    .vegan-recept__count,
+    .vegan-calendar__count,
+    .vegan-navigation__count {
+        margin-bottom: 1.2rem;
+    }
+
+    .vegan-title {
+        font-size: 3rem;
+        line-height: 4.2rem;
+    }
+
+    .vegan-typography__font {
+        font-size: 5rem;
+        line-height: 1;
+        margin-bottom: 8rem;
+    }
+
+    .vegan-wireframing-screens {
+        gap: 0.7rem;
+    }
+
+    .vegan-typography__title {
+        margin-bottom: 4rem;
+    }
+
+    .vegan-typography-examples {
+        gap: 1.5rem;
+        margin-bottom: 7.6rem;
+    }
+
+    .vegan-wireframing__title,
+    .vegan-calendar__title {
+        margin-bottom: 4.2rem;
+    }
+
+    .vegan-calendar-images {
+        gap: 0.7rem;
+    }
+
+    .vegan-navigation__count,
+    .vegan-navigation__title {
+        margin-left: 0;
+    }
+
+    .vegan-navigation__title {
+        margin-bottom: 4.2rem;
+    }
+
+    .vegan-navigation-images {
+        gap: 1.3rem;
+    }
+
+    .vegan-navigation-images .vegan-img-wrapper:first-child,
+    .vegan-navigation-images .vegan-img-wrapper:last-child {
+        display: none;
+    }
+
+    .vegan-screens {
+        gap: 1.3rem;
+    }
+
+    .vegan-screens .vegan-screens__image {
+        width: calc(33.3% - 0.86rem);
+    }
+
+    .vegan-screens .vegan-screens__image:nth-child(4),
+    .vegan-screens .vegan-screens__image:nth-child(8) {
+        display: none;
+    }
+
+    .vegan-typography,
+    .vegan-wireframing,
+    .vegan-recepie,
+    .vegan-recept,
+    .vegan-calendar,
+    .vegan-navigation,
+    .vegan-screens {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    .vegan-footer {
+        padding-top: 5rem;
+    }
+
+    .vegan-steps-schema__content {
+        position: absolute;
+        top: 0;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        padding: 14% 21%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .vegan-steps-schema__title {
+        font-size: 1rem;
+    }
+
+    .vegan-steps-schema__title:nth-child(1) {
+        margin-right: 36%;
+        bottom: 0;
+        align-self: flex-end;
+    }
+
+    .vegan-steps-schema__title:nth-child(2) {
+        align-self: flex-start;
+    }
+
+    .vegan-steps-schema__title:nth-child(3) {
+        bottom: 0;
+        align-self: flex-end;
+    }
+
+    .vegan-steps-schema__title:nth-child(4) {
+        align-self: flex-start;
+    }
+
+    .vegan-steps-schema__title:nth-child(5) {
+        bottom: 0;
+        align-self: flex-end;
+        margin-right: 23%;
+    }
+
+    .vegan-recepie-wrapper {
+        gap: 6rem;
+        padding-left: 2.7rem;
+        padding-right: 2.7rem;
+    }
+
+    .vegan-recepie .vegan-recepie__column:nth-child(2) {
+        display: none;
+    }
+
+    .vegan-recepie .vegan-recepie__column:nth-child(1) {
+        margin-right: 0;
+    }
+
+    .vegan-recepie .vegan-recepie__column:nth-child(3) {
+        margin-top: 17.4rem;
+    }
+
+    .vegan-recepie__count {
+        margin-top: 5rem;
+    }
+
+    .vegan-recepie__title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .vegan-recepie__description {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+        margin-bottom: 4rem;
+    }
+
+    .vegan-img-wrapper.vegan-img-wrapper_bottom-indent {
+        margin-bottom: 3rem;
+    }
+
+    .vegan-img-wrapper.vegan-img-wrapper_top-indent {
+        margin-top: 3rem;
+    }
+
+    .vegan-img-wrapper.vegan-img-wrapper-desktop-only {
+        display: none;
+    }
+
+    .vegan-img-wrapper.vegan-img-wrapper-mobile-only {
+        display: block;
+    }
+
+    .vegan-recepie-img-mobile-only_indent {
+        margin-top: 3.1rem;
+    }
+
+    .vegan-recept .vegan-recept__column:nth-child(2) {
+        display: none;
+    }
+
+    .vegan-recept .vegan-recept__column:nth-child(3) {
+        margin-top: 14rem;
+    }
+
+    .vegan-recept__title {
+        margin-bottom: 4.2rem;
+    }
+
+    .vegan-recept__promo-title-unusual:nth-child(1) {
+        font-size: 3.5918rem;
+        line-height: 1;
+    }
+
+    .vegan-recept__promo-title-unusual:last-child {
+        font-size: 2.52739rem;
+        line-height: 1;
+    }
+
+    .vegan-recept__promo-title-usual {
+        font-size: 4.5rem;
+        line-height: 1;
+    }
+
+    .vegan-recept__description {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .vegan-recepie-bg {
+        top: 30.3rem;
+        height: 80.3rem;
+        border-radius: 1.12222rem;
+    }
+
+    .vegan-recept {
+        padding-left: 2.7rem;
+        padding-right: 2.7rem;
+    }
 }
