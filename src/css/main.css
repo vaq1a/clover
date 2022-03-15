@@ -537,6 +537,7 @@
 /*vegan-recepie*/
 .vegan-recepie {
     position: relative;
+    z-index: 99;
 }
 
 .vegan-recepie-bg {
